@@ -1,0 +1,304 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header > div, header ul {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 134px;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: rgb(181, 23, 23);
+    text-decoration: underline;
+}
+
+header > div > a img{
+    width: 200px;
+}
+
+header > nav li{
+    margin-right: 20px;
+}
+
+header > div li {
+    margin-right: 20px;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+header > div > div > ul > li img{
+    height: 30px;
+}
+/*-------------------------------------------------------*/
+#slider{
+    display: flex;
+    flex-direction:column ;
+    background-image: url(./background_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-imagen 0.7 ease-in-out;
+    height: 700px;
+}
+
+#slider .content{   
+    flex-grow: 1;
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+#slider .slideButton{
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    cursor: pointer;
+}
+#slider .prevSlide{
+    left: 2rem;
+}
+#slider .nextSlide{
+    right: 2rem  ;
+}
+#slider .content_claim{
+    font-size: 63px;
+    color: aqua;
+    margin: 0;
+}
+#slider .content_subclaim{
+    color:white;
+    font-size: 36px;
+    margin: .5rem 0;
+    margin-bottom: 2rem;
+}
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 60px;
+  }
+  .waviy span {
+    font-family: 'Alfa Slab One', cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+/*---------------------------------------------------------------*/
+section > div{
+    display: flex;
+    justify-content: center;
+}
+section#testimonios .container{
+    margin: 50px auto;
+    text-align: center;
+}
+section#testimonios .container > div{
+    padding: 20px 10px 20px 10px;
+    border: 1px solid #ccc;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin-right: 10px;
+}
+section#testimonios .container > div:last-of-type{
+    margin-right: 0px;
+}
+section#testimonios .container > div img{
+   border-radius: 100%;
+}
+section#testimonios .container > div h3{
+    margin: 10px 0px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+/*-----------------------------------------------------------*/
+section#historia .container{
+    margin: 70px auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    
+}
+
+section#historia .container > div img{
+    width: 100%;
+}
+section#historia .container > div p{
+    
+     margin-left: 20px;
+     font-size: 20px;
+     line-height: 32px;
+    
+}
+/*--------------------------------------------------------*/
+footer{
+    background-color: green;
+    padding: 40px 0px;
+    color: white;
+}
+
+
+footer > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+footer > div > div{ 
+    font-size: 18px;
+    display: block;
+
+}
+footer > div > div a{ 
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+
+}
+footer > div > div a:hover{ 
+    text-decoration: underline;
+    
+}
+footer > div > div h3{
+    color: white;
+    margin: 0 0 1rem 0;
+    font-size: 24px;
+}
+footer > div > div p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width:1024px){
+    .container {
+        justify-content: unset;
+        display: block;
+        align-items: unset;
+        height: auto;
+        text-align: center;
+    }
+
+    header > div, header ul {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    
+    nav {
+        margin: 20px 0;
+    }
+
+    header > div > div{
+        margin: 0px 0 20px 0;
+    }
+
+    header > div li {
+        font-size: 22px;
+    }
+
+    section#historia .container {
+        display: block;
+    }
+
+    section#historia .container > div p {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+@media (max-width:650px){
+    #slider .content {
+        padding: 4rem;
+    }
+    .waviy {
+        font-size: 40px;
+      }
+}
+@media (max-width:480px){
+    header > div li {
+        font-size: 10px;
+    }
+    .waviy {
+        font-size: 30px;
+      }
+      #slider .content {
+        padding: 3rem;
+    }
+}
+
